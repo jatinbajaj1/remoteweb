@@ -10,7 +10,7 @@ Run apt-get install -y vim
 # Fix sh
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
-apt-get install software-properties-common
+RUN apt-get install software-properties-common
 
 # Install dependencies
 RUN apt-get update && \
