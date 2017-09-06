@@ -10,6 +10,12 @@ Run apt-get install -y vim
 # Fix sh
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
+apt-get install software-properties-common
+
+# Install dependencies
+RUN apt-get update && \
+apt-get install -y git build-essential curl wget software-properties-common
+
 
 # Install JDK 8
 RUN \
