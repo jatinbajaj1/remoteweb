@@ -1,4 +1,5 @@
-FROM ubuntu:16.10
+
+FROM ubuntu:14.04
 FROM tomcat:8.0
 MAINTAINER jabajaj
 EXPOSE 8080
@@ -10,7 +11,7 @@ Run apt-get install -y vim
 # Fix sh
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
-RUN apt-get install software-properties-common
+
 
 # Install dependencies
 RUN apt-get update && \
