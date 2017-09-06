@@ -7,5 +7,5 @@ Run apt-get update
 Run apt-get install -y curl
 Run apt-get install -y vim
 
-RUN rm -fr /usr/local/tomcat/webapps/ROOT
 COPY System.war /usr/local/tomcat/webapps/
+CMD ["/usr/local/tomcat/bin/catalina.sh", "run"]
