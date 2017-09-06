@@ -7,6 +7,10 @@ Run apt-get update
 Run apt-get install -y curl
 Run apt-get install -y vim
 
+# Fix sh
+RUN rm /bin/sh && ln -s /bin/bash /bin/sh
+
+
 # Install JDK 8
 RUN \
 echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | debconf-set-selections && \
